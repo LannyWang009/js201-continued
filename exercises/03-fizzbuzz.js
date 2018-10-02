@@ -15,14 +15,14 @@ function fizzbuzz (theNumber) {
     var fizzString = "";
     if (theNumber < 1) { return "error"} 
     else {
-        for (var i = 0; i < theNumber; i++) {
-            if (i % 3 != 0 && i % 5 != 0) {fizzString = "." + fizzString}
-            else if (i % 3 == 0 && i % 5 != 0) {fizzString = "fizz" + fizzString}
-            else if (i % 3 != 0 && i % 5 == 0) {fizzString = "buzz" + fizzString}
-            else if (i % 3 == 0 && i % 5 == 0) {fizzString = "fizzbuzz" + fizzString}
+        for (var i = 1; i < theNumber+1; i++) {
+            if (i % 3 != 0 && i % 5 != 0) {fizzString += "." }
+            else if (i % 3 == 0 && i % 5 != 0) {fizzString += "fizz" }
+            else if (i % 3 != 0 && i % 5 == 0) {fizzString += "buzz" }
+            else if (i % 3 == 0 && i % 5 == 0) {fizzString += "fizzbuzz" }
         }
     }
-    return fizzString
+    return fizzString;
 }
 
 console.log(fizzbuzz(3));
